@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/tailwindcss.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>SPORECASH!</title>
+    <script>
+        window.onload = function () {
+        
+        var options = {
+            animationEnabled: true,
+            // title: {
+            //     text: "Total Supply: 100,000,000,000,000,000",
+            //     titleFontSize: "3px",
+            //     titleFontWeight: 1
+            // },
+            // legend:{
+            //     fontSize: 10,
+            //     },
+            data: [{
+                type: "doughnut",
+                innerRadius: "40%",
+                showInLegend: false,
+                legendText: "{label}",
+                indexLabel: "{label}: #percent%",
+                dataPoints: [
+                    { label: "Presale", y: 5000000000000000 },
+                    { label: "Liquidity", y: 45000000000000000 },
+                    { label: "Private Sale", y: 5000000000000000 },
+                    { label: "Marketing Wallet", y: 10000000000000000 },
+                    { label: "Airdrop", y:  5000000000000000 },
+                    { label: "Burn", y:  30000000000000000 }
+                ]
+            }]
+        };
+        $("#chartContainer").CanvasJSChart(options);
+        
+        }
+        </script>
+  </head>
+  <style>
+      body{
+          font-family: 'Poppins';
+      }
+  </style>
+  <body>
+    <nav class="fixed z-40 flex items-center w-full px-8 py-4 text-sm bg-white shadow lg:px-24" x-data="{openNav: false}">
+        <div class="absolute right-0 z-40 block text-xs lg:hidden" @click="openNav = !openNav" >
+            <div class="hidden hamburger" :class="{ 'hamburger--slider is-active ': openNav }">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+        </div>
+      <div class="mr-auto text-xl">
+          <img src="./img/logo.png" class="w-16 lg:w-24" alt="SPORECASH">
+      </div>
+      <ul 
+      :class="{ '-mt-96 ': !openNav }"
+      class="absolute top-0 left-0 z-10 flex flex-col w-full gap-8 py-6 mx-auto mt-20 text-center bg-white shadow-xl lg:shadow-none lg:py-0 lg:mt-0 lg:flex-row lg:relative lg:w-max">
+        <li class="transition duration-200 ease-in hover:text-green-500 text-xl">What is Sporecash</li>
+        <li class="transition duration-200 ease-in hover:text-green-500 text-xl">Presale</li>
+        <li class="transition duration-200 ease-in hover:text-green-500 text-xl">Tokenomics</li>
+        <li class="transition duration-200 ease-in hover:text-green-500 text-xl">Roadmap</li>
+        <li class="transition duration-200 ease-in hover:text-green-500 text-xl">Join Telegram</li>
+      </ul>
+    </nav>
+    <heading class="flex flex-col items-center w-full p-8 pt-24 bg-gray-300 lg:h-3/6 lg:flex-row lg:p-24 lg:pt-48">
+        <div class="w-full text-purple-900">
+            <h1 class="py-4 text-4xl font-semibold">
+                SPORECASH!
+            </h1>
+            <h2 class="text-xl font-medium">    
+                <ul>
+                  <li> Auto-staking: Earn SPORECASH with zero fees.</li>
+                  <li>Referral strategy: Refer and earn $BNB </li>
+                  <li> Fair launch: 90% of funds raised will be added to liquidity</li>
+                  <li>Super safe: Liquidity is burned.</li>
+                  <li>Launching time: As soon as presale ends.</li>
+                </ul>
+            </h2>
+            <div class="flex justify-between w-full gap-5 pt-4 mx-auto text-xs lg:justify-start">
+                <a href="dapp.html">
+                    <button class="flex items-center gap-2 px-2 py-2 pr-3 text-white bg-indigo-500 rounded-lg shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-coin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <circle cx="12" cy="12" r="9"></circle>
+                            <path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 0 0 0 4h2a2 2 0 0 1 0 4h-2a2 2 0 0 1 -1.8 -1"></path>
+                            <path d="M12 6v2m0 8v2"></path>
+                        </svg>
+                        Buy Tokens
+                    </button>
+                </a>
+                <a href="https://bscscan.com/token/0x4764856cadf9e95a671e16d466e45c0f958d9077">
+                    <button class="flex items-center gap-2 px-3 py-2 pr-4 text-white bg-green-500 rounded-lg shadow">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <circle cx="12" cy="11" r="3"></circle>
+                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"></path>
+                    </svg>
+                    Contract Address
+                </button>
+            </a>
+            </div>
+        </div>
+        <div class="w-full">
+            <img src="./img/logo1-lg.png" class="w-full lg:ml-auto" alt="Logo">
+        </div>
+    </heading>
+    <section>
+        <div class="grid items-center w-full h-80 lg:gap-32 lg:px-24 lg:grid-cols-2">
+            <div class="">
+                <h1 class="py-4 text-2xl font-semibold text-center text-gray-700">SPORECASH PROTOCOL</h1>
+                <p class="text-xl text-gray-600">By holding SPORECASH in your wallet, you could earn more profit. <br> In each transaction, the protocol automatically distributes the rewards to the holders, as well as the liquidity that is automatically burned.</p>
+            </div>
+            <div class="">
+                <h1 class="py-4 text-2xl font-semibold text-center text-gray-700">SPORECASH LAUNCH</h1>
+                <p class="text-xl text-gray-600">It will be released on Pancakeswap as soon as presale ends. <br> Remember to generate your referral link and you will earn 50% BNB for each purchase made by your referrals, THE MORE YOU SHARE THE MORE YOU EARN!</p>
+            </div>
+        </div>
+    </section>
+    <section class="items-center h-screen py-16">
+        <h1 class="py-4 text-4xl font-semibold text-center text-gray-700">Tokenomics</h1>
+        <h1 class="py-4 text-xl font-semibold text-center text-gray-700">Total Supply: 100,000,000,000,000,000</h1>
+        <div id="chartContainer" class="items-center w-full place-content-center"></div>
+    </section>
+    <section class="px-4 py-12 pt-20 lg:px-24">
+        <h1 class="text-xl font-semibold text-center lg:text-3xl">Roadmap</h1>
+        <p class="mx-auto text-lg text-center text-gray-500 lg:w-7/12">Sporecash plans to be more than just a buyback token. Take a look at our plans for the upcoming weeks and months, and stay tuned for a few upcoming surprise announcements in our Telegram regarding utility and use-cases:</p>
+        <div class="grid w-full gap-10 pt-10 lg:grid-cols-2">
+            <div class="w-full">
+                <div class="flex flex-col gap-4 px-8 py-6 bg-white shadow-2xl lg:flex-row rounded-xl">
+                    <div class="items-center">
+                        <div class="top-0 justify-center w-10 h-10 pt-2 text-center text-white bg-yellow-500 rounded-full">1</div>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex">
+                            <h1 class="text-xl font-semibold">Launch Phase</h1>
+                            <div class="ml-auto text-sm text-gray-500">September 2021</div>
+                        </div>
+                        <p class="text-lg text-gray-500 text-justify">Our team has been preparing for a successful presale of Sporecash, and we've successfully gotten our modified fork developed and tested! Now our next step is building our core community and launching Sporecash. All information pertaining to this will be posted in our Telegram.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full">
+                <div class="flex flex-col gap-4 px-8 py-6 bg-white shadow-2xl lg:flex-row rounded-xl">
+                    <div class="items-center">
+                        <div class="top-0 justify-center w-10 h-10 pt-2 text-center text-white bg-green-500 rounded-full">2</div>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex">
+                            <h1 class="text-xl font-semibold">Building Phase</h1>
+                            <div class="ml-auto text-sm text-gray-500">October 2021</div>
+                        </div>
+                        <p class="text-lg text-gray-500 text-justify">A month is a long time in the crypto space. So during this month, our team plans to get a lot done. Most notably we'll get Sporecash trading on some exchanges during this time! We will also be listed on CoinGecko/CoinMarketCap by this stage.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full">
+                <div class="flex flex-col gap-4 px-8 py-6 bg-white shadow-2xl lg:flex-row rounded-xl">
+                    <div class="items-center">
+                        <div class="top-0 justify-center w-10 h-10 pt-2 text-center text-white bg-blue-400 rounded-full">3</div>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex">
+                            <h1 class="text-xl font-semibold">Expanding Phase</h1>
+                            <div class="ml-auto text-sm text-gray-500">November 2021</div>
+                        </div>
+                        <p class="text-lg text-gray-500 text-justify">By now we will have built up a strong and passionate community around Sporecash. During this month, we plan on producing our own merchandise, fully releasing our Sporecash dApp, and also doing a major marketing push in order to keep the spark alive for Sporecash over the coming fall season.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full">
+                <div class="flex flex-col gap-4 px-8 py-6 bg-white shadow-2xl lg:flex-row rounded-xl">
+                    <div class="items-center">
+                        <div class="top-0 justify-center w-10 h-10 pt-2 text-center text-white bg-indigo-400 rounded-full">4</div>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <div class="flex">
+                            <h1 class="text-xl font-semibold">Mooning Phase</h1>
+                            <div class="ml-auto text-sm text-gray-500">December 2021</div>
+                        </div>
+                        <p class="text-lg text-gray-500 text-justify">When we get here, we'll release an updated roadmap with our team and community's refreshed goals and visions for the project and Sporecash dApp. By now, we will have hoped to surpass all other memecoins around us and to have built up one of the strongest communities in crypto!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <footer class="pb-20 lg:px-48" id="contact">
+            <h1 class="py-4 text-3xl font-semibold text-center">Community</h1>
+            <div class="grid gap-16 p-8 lg:grid-cols-2 ">
+                <div class="px-6 py-8 text-center shadow rounded-3xl bg-gradient-to-tl from-blue-400 to-blue-500">
+                    <div class="mx-auto">
+                        <svg fill-rule="evenodd" xmlns="http://www.w3.org/2000/svg" class="mx-auto icon icon-tabler icon-tabler-brand-twitter" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="transparent" fill="white" stroke-linecap="round" stroke-linejoin="round">
+                        <path id="telegram-4" d="M12,0c-6.626,0 -12,5.372 -12,12c0,6.627 5.374,12 12,12c6.627,0 12,-5.373 12,-12c0,-6.628 -5.373,-12 -12,-12Zm3.224,17.871c0.188,0.133 0.43,0.166 0.646,0.085c0.215,-0.082 0.374,-0.267 0.422,-0.491c0.507,-2.382 1.737,-8.412 2.198,-10.578c0.035,-0.164 -0.023,-0.334 -0.151,-0.443c-0.129,-0.109 -0.307,-0.14 -0.465,-0.082c-2.446,0.906 -9.979,3.732 -13.058,4.871c-0.195,0.073 -0.322,0.26 -0.316,0.467c0.007,0.206 0.146,0.385 0.346,0.445c1.381,0.413 3.193,0.988 3.193,0.988c0,0 0.847,2.558 1.288,3.858c0.056,0.164 0.184,0.292 0.352,0.336c0.169,0.044 0.348,-0.002 0.474,-0.121c0.709,-0.669 1.805,-1.704 1.805,-1.704c0,0 2.084,1.527 3.266,2.369Zm-6.423,-5.062l0.98,3.231l0.218,-2.046c0,0 3.783,-3.413 5.941,-5.358c0.063,-0.057 0.071,-0.153 0.019,-0.22c-0.052,-0.067 -0.148,-0.083 -0.219,-0.037c-2.5,1.596 -6.939,4.43 -6.939,4.43Z"/>
+                    </svg>
+                </div>
+                <h1 class="py-4 text-lg font-semibold text-white">Telegram</h1>
+                <a href="https://t.me/SporeCash">
+                <button class="w-full py-2 transition duration-200 rounded-full shadow bg-gradient-to-br from-blue-500 via-blue-500 to-blue-600 hover:bg-gray-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <line x1="15" y1="16" x2="19" y2="12"></line>
+                        <line x1="15" y1="8" x2="19" y2="12"></line>
+                    </svg>
+                </button>
+                </a>
+            </div>
+            <div class="px-6 py-8 text-center shadow rounded-3xl bg-gradient-to-tr from-blue-300 via-blue-400 to-blue-600">
+                <div class="mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon icon-tabler icon-tabler-brand-twitter" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="transparent" fill="white" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                    </svg>
+                </div>
+                <h1 class="py-4 text-lg font-semibold text-white">Twitter</h1>
+                <a href="https://twitter.com/sporecash">
+                    <button class="w-full py-2 transition duration-200 rounded-full shadow bg-gradient-to-br from-blue-500 via-blue-500 to-blue-600 hover:bg-gray-200">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon icon-tabler icon-tabler-arrow-narrow-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <line x1="15" y1="16" x2="19" y2="12"></line>
+                            <line x1="15" y1="8" x2="19" y2="12"></line>
+                        </svg>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </footer>
+        <h1 class="py-5 text-sm font-semibold text-center text-gray-700 ">&copy;SPORECASH 2021 - Beyond</h1>
+    </section>
+    
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/jquery.canvasjs.min.js" integrity="sha512-xeQFOWENzkyJSDlwwlX5lsFHfFL3Y3idnpBZYF/SCRxZz03HW/fpd5Lpd78SzjAzp/iBeWJ4PQRKlxWeYqQlHA==" crossorigin="anonymous" referrerpolicy="no-referrer" ></script>
+  </body>
+</html>
