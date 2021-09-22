@@ -1,1 +1,1 @@
-"# SporeCash" 
+"# SporeCash." 
